@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_c7_sat/model/tabs_response.dart';
-import 'package:news_c7_sat/ui/screens/tab_details.dart';
-import 'package:news_c7_sat/ui/screens/tab_widget.dart';
+import 'package:news_c7_sat/ui/screens/home/fragments/newsfragment/tab_details.dart';
+import 'package:news_c7_sat/ui/screens/home/fragments/newsfragment/tab_widget.dart';
 
 class TabsList extends StatefulWidget {
   List<MyTab> tabs;
@@ -34,7 +34,9 @@ class _TabsListState extends State<TabsList> {
             ),
             Expanded(
               child: TabBarView(
-                  children: widget.tabs.map((tab) => TabDetails(tab)).toList()
+                  children: widget.tabs.map((tab){
+                   return TabDetails(tab);
+                  }).toList()
               ),
             )
           ],

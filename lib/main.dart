@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_c7_sat/ui/screens/home.dart';
+import 'package:news_c7_sat/ui/screens/home/home.dart';
+
 
 void main() {
   runApp(const MyApp());
