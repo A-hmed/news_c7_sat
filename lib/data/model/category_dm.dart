@@ -1,7 +1,6 @@
 
-
 import 'package:flutter/material.dart';
-import 'package:news_c7_sat/model/category_dm.dart';
+
 
 class CategoryDM{
   String id;

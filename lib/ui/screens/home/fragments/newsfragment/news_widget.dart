@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_c7_sat/model/news_response.dart';
+import 'package:news_c7_sat/data/model/news_response.dart';
 
 class NewsWidget extends StatelessWidget {
   Article article;

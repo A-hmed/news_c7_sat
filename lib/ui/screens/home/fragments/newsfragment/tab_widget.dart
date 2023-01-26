@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_c7_sat/model/tabs_response.dart';
+import 'package:news_c7_sat/data/model/tabs_response.dart';
 
 class TabWidget extends StatelessWidget {
   MyTab tab;

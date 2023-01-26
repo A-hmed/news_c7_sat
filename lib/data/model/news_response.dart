@@ -1,4 +1,5 @@
-import 'package:news_c7_sat/model/tabs_response.dart';
+import 'package:news_c7_sat/data/model/tabs_response.dart';
+
 
 /// status : "ok"
 /// totalResults : 14032

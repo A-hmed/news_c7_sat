@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_c7_sat/model/category_dm.dart';
+import 'package:news_c7_sat/data/model/category_dm.dart';
+
 import 'package:news_c7_sat/ui/screens/home/fragments/categories/category.dart';
 class CategoriesFragment extends StatelessWidget {
 

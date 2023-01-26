@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:news_c7_sat/api/ApiManager.dart';
-import 'package:news_c7_sat/model/news_response.dart';
-import 'package:news_c7_sat/model/tabs_response.dart';
+import 'package:news_c7_sat/data/model/news_response.dart';
+import 'package:news_c7_sat/data/model/tabs_response.dart';
 import 'package:news_c7_sat/ui/screens/home/fragments/newsfragment/news_widget.dart';
+import 'package:news_c7_sat/ui/screens/home/fragments/newsfragment/news_fragment_view_model.dart';
 
-class TabDetails extends StatelessWidget {
+class TabDetails extends StatefulWidget {
   MyTab tab;
-  int page;
   TabDetails(this.tab);
+
+  @override
+  State<TabDetails> createState() => _TabDetailsState();
+}
+
+class _TabDetailsState extends State<TabDetails> {
+  NewsFragmentViewModel vm = NewsFragmentViewModel();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    vm.tab = widget.tab;
+  }
 
   @override
   Widget build(BuildContext context) {
 
     return FutureBuilder<NewsResponse>(
-        future: ApiManager.getNews(tab.id??""),
+        future: vm.getNews(),
         builder: (context , snapshot){
           if(snapshot.hasError){
             return Text(snapshot.error.toString());
